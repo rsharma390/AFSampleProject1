@@ -45,7 +45,7 @@ class TestLogin():
             #driver.find_element_by_id("welcome").click()
             #driver.find_element_by_link_text("Sign off").click()
             x = driver.title
-            assert x == "abc"
+            assert x == "OrangeHRM"
 
         except AssertionError as error:
             print("Assertion error occurred")
