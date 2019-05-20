@@ -3,9 +3,13 @@ import time
 import pytest
 import allure
 import moment
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "....", "...."))
 from pages.loginPage import LoginPage
 from pages.homePage import HomePage
 from utils import utils as utils
+
 
 @pytest.mark.usefixtures("test_setup")
 class TestLogin():
@@ -41,7 +45,7 @@ class TestLogin():
             #driver.find_element_by_id("welcome").click()
             #driver.find_element_by_link_text("Sign off").click()
             x = driver.title
-            assert x == "OrangeHRM"
+            assert x == "abc"
 
         except AssertionError as error:
             print("Assertion error occurred")
